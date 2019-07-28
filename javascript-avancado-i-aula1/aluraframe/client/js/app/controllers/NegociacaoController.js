@@ -1,11 +1,15 @@
 class NegociacaoController {
 
     constructor() {
+
         let $ = document.querySelector.bind(document);
 
         this._inputData = $('#data');
         this._inputQuantidade = $('#quantidde');
         this._inputValor = $('#valor ');
+        this._negociacoesView = new NegociacoesView($('#negociacoesView'));
+
+        this._negociacoesView.update(this._listaNegociacoes);
     }
 
     adiciona(event) {
